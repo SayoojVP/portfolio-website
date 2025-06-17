@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --hue-color: 230; /* Blue: 230, Purple: 250, Green: 142, Pink: 340 */
+  
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  /* Dark theme variables */
+  --dark-title-color: hsl(var(--hue-color), 8%, 95%);
+  --dark-text-color: hsl(var(--hue-color), 8%, 75%);
+  --dark-body-color: hsl(var(--hue-color), 28%, 12%);
+  --dark-container-color: hsl(var(--hue-color), 29%, 16%);
+  --dark-input-color: hsl(var(--hue-color), 29%, 20%);
+  --dark-scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --dark-scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+
+  /* Font and typography */
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /* Font weight */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* Margins */
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: #f5f5f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* ===== Dark Theme CSS ===== */
+
+/* Apply dark theme styles when data-theme="dark" is on body */
+body[data-theme="dark"] {
+  --title-color: var(--dark-title-color);
+  --text-color: var(--dark-text-color);
+  --body-color: var(--dark-body-color);
+  --container-color: var(--dark-container-color);
+  --input-color: var(--dark-input-color);
+  --scroll-bar-color: var(--dark-scroll-bar-color);
+  --scroll-thumb-color: var(--dark-scroll-thumb-color);
+}
+
+/* Theme transition */
+body {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/* Theme toggle button styles */
+.theme-button {
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--title-color);
+  margin-left: var(--mb-1);
+  transition: color 0.3s ease;
+}
+
+.theme-button:hover {
+  color: var(--first-color);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
