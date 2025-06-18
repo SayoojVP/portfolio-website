@@ -21,7 +21,7 @@ app.get('/api/info', (req, res) => {
   // This could be connected to a database in a real application
   const personalInfo = {
     name: 'Sayooj VP',
-    title: 'Developer / UI Designer / Entrepreneur',
+    title: 'Full Stack Developer / Entrepreneur',
     bio: 'A passionate developer focused on creating beautiful and functional web applications.',
     email: 'sayoojvp55@gmail.com'
   };

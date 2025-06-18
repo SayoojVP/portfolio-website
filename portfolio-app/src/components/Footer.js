@@ -100,23 +100,10 @@ const Footer = () => {
     <FooterContainer className="footer" data-theme="dark">
       <FooterContent className="container">
         <FooterTitle>Sayooj VP</FooterTitle>
-        <FooterSubtitle>Developer / UI Designer / Entreprenuer</FooterSubtitle>
+        <FooterSubtitle>Full Stack Developer / Entrepreneur</FooterSubtitle>
         
         <FooterLinks>
           <FooterLink to="/">Home</FooterLink>
-          <FooterLink 
-            to="/" 
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname === '/') {
-                scrollToSection('skills');
-              } else {
-                window.location.href = '/#skills';
-              }
-            }}
-          >
-            Skills
-          </FooterLink>
           <FooterLink to="/projects">Projects</FooterLink>
           <FooterLink to="/contact">Contact</FooterLink>
         </FooterLinks>
@@ -128,7 +115,7 @@ const Footer = () => {
           <SocialIcon href="https://www.linkedin.com/in/sayoojvp/" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </SocialIcon>
-          <SocialIcon href="https://twitter.com/yourusername" target="_blank" rel="noreferrer">
+          <SocialIcon href="https://x.com/_sayooj_vp" target="_blank" rel="noreferrer">
             <FaTwitter />
           </SocialIcon>
         </SocialLinks>
