@@ -74,11 +74,20 @@ body {
   margin: 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
+  background-color: var(--dark-body-color);
+  color: var(--dark-text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.8;
+  
+  /* Always use dark theme */
+  --title-color: var(--dark-title-color);
+  --text-color: var(--dark-text-color);
+  --body-color: var(--dark-body-color);
+  --container-color: var(--dark-container-color);
+  --input-color: var(--dark-input-color);
+  --scroll-bar-color: var(--dark-scroll-bar-color);
+  --scroll-thumb-color: var(--dark-scroll-thumb-color);
 }
 
 code {
@@ -92,36 +101,7 @@ code {
 
 /* ===== Dark Theme CSS ===== */
 
-/* Apply dark theme styles when data-theme="dark" is on body */
-body[data-theme="dark"] {
-  --title-color: var(--dark-title-color);
-  --text-color: var(--dark-text-color);
-  --body-color: var(--dark-body-color);
-  --container-color: var(--dark-container-color);
-  --input-color: var(--dark-input-color);
-  --scroll-bar-color: var(--dark-scroll-bar-color);
-  --scroll-thumb-color: var(--dark-scroll-thumb-color);
-}
-
-/* Theme transition */
-body {
-  transition: background-color 0.3s, color 0.3s;
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-/* Theme toggle button styles */
-.theme-button {
-  font-size: 1.25rem;
-  cursor: pointer;
-  color: var(--title-color);
-  margin-left: var(--mb-1);
-  transition: color 0.3s ease;
-}
-
-.theme-button:hover {
-  color: var(--first-color);
-}
+/* Dark theme is now the only theme - no theme toggle */
 
 /* Animation classes */
 .fade-in {

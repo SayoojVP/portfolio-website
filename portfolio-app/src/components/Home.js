@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedin, FaTwitter, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../context/ThemeContext';
 
 const HomeSection = styled.section`
   padding: 5rem 0 0;
@@ -145,7 +144,6 @@ const Loading = styled.div`
 `;
 
 const Home = () => {
-  const { isDarkMode } = useContext(ThemeContext);
   const [personalInfo, setPersonalInfo] = useState({
     name: 'Sayooj VP',
     title: 'Developer / UI Designer / Entrepreneur',

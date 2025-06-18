@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
-import { ThemeContext } from '../context/ThemeContext';
 import { scrollToSection } from '../utils/scrollUtils';
 
 const FooterContainer = styled.footer`
@@ -83,7 +82,6 @@ const Copyright = styled.p`
 `;
 
 const Footer = () => {
-  const { isDarkMode } = useContext(ThemeContext);
   const location = useLocation();
   
   const handleLinkClick = (sectionId) => {
@@ -99,7 +97,7 @@ const Footer = () => {
   };
   
   return (
-    <FooterContainer className="footer" data-theme={isDarkMode ? 'dark' : 'light'}>
+    <FooterContainer className="footer" data-theme="dark">
       <FooterContent className="container">
         <FooterTitle>Sayooj VP</FooterTitle>
         <FooterSubtitle>Developer / UI Designer / Entreprenuer</FooterSubtitle>

@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBriefcase, FaHome, FaEnvelope, FaSun, FaMoon, FaCode } from 'react-icons/fa';
+import { FaBriefcase, FaHome, FaEnvelope, FaCode } from 'react-icons/fa';
 import styled from 'styled-components';
-import { ThemeContext } from '../context/ThemeContext';
 import { scrollToSection } from '../utils/scrollUtils';
 
 const NavbarContainer = styled.nav`
@@ -17,24 +16,7 @@ const NavActions = styled.div`
   align-items: center;
 `;
 
-const ThemeButton = styled.button`
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  cursor: pointer;
-  color: var(--title-color);
-  margin-left: var(--mb-1);
-  padding: 0.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s, transform 0.3s;
-
-  &:hover {
-    color: var(--first-color);
-    transform: rotate(15deg);
-  }
-`;
+// Theme button removed - using dark mode only
 
 const Logo = styled(Link)`
   font-weight: var(--font-semi-bold);
@@ -95,7 +77,6 @@ const NavLink = styled(Link)`
 `;
 
 const Navbar = () => {
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const location = useLocation();
   
   const handleLinkClick = (to) => {
@@ -147,13 +128,6 @@ const Navbar = () => {
             </NavLink>
           </NavItem>
         </NavList>
-        
-        <ThemeButton 
-          onClick={toggleTheme} 
-          aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-        >
-          {isDarkMode ? <FaSun /> : <FaMoon />}
-        </ThemeButton>
       </NavActions>
     </NavbarContainer>
   );
