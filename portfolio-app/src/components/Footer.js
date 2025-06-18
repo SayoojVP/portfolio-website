@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
-import { scrollToSection } from '../utils/scrollUtils';
 
 const FooterContainer = styled.footer`
   padding: 2rem 0;
@@ -82,20 +81,6 @@ const Copyright = styled.p`
 `;
 
 const Footer = () => {
-  const location = useLocation();
-  
-  const handleLinkClick = (sectionId) => {
-    if (location.pathname === '/') {
-      scrollToSection(sectionId);
-    } else {
-      // Navigate to home and then scroll
-      // Assuming you have a way to navigate programmatically
-      // For example, using useHistory from react-router-dom
-      // history.push('/');
-      // setTimeout(() => scrollToSection(sectionId), 100);
-    }
-  };
-  
   return (
     <FooterContainer className="footer" data-theme="dark">
       <FooterContent className="container">

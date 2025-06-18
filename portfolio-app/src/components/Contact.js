@@ -18,12 +18,7 @@ const ContactContainer = styled.div`
 `;
 
 const ContactContent = styled.div``;
-
-const ContactInfo = styled.div`
-  display: flex;
-  margin-bottom: var(--mb-2);
-  align-items: center;
-`;
+const ContactInfo = styled.div``; // This will be used as a container
 
 const ContactInfoBox = styled.div`
   background-color: var(--container-color);

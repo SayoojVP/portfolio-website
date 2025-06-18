@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaBriefcase, FaHome, FaEnvelope } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBriefcase, FaHome, FaEnvelope, FaCode } from 'react-icons/fa';
 import styled from 'styled-components';
@@ -77,7 +79,6 @@ const NavLink = styled(Link)`
 `;
 
 const Navbar = () => {
-  const location = useLocation();
   
   const handleLinkClick = (to) => {
     if (to.startsWith('#')) {
