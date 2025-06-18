@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
+import { Link, useLocation, FaGithub, FaLinkedin, FaTwitter, FaHeart } from '../utils/iconExports';
 import { scrollToSection } from '../utils/scrollUtils';
 
 const FooterContainer = styled.footer`

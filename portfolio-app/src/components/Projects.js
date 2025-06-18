@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from '../utils/iconExports';
 
 const ProjectsSection = styled.section`
   padding: 5rem 0 2rem;

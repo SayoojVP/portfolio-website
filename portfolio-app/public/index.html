@@ -42,6 +42,12 @@
       }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
+    <!-- Module preload polyfill for ESM modules -->
+    <script type="text/javascript">
+      // Fix for ESM modules
+      window.__vite_is_modern_browser = true;
+      window.process = { env: { NODE_ENV: '%NODE_ENV%' } };
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

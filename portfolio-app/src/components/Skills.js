@@ -8,9 +8,7 @@ import {
   FaNodeJs, 
   FaGitAlt,
   FaGithub,
-  FaDatabase
-} from 'react-icons/fa';
-import { 
+  FaDatabase,
   SiExpress, 
   SiMongodb, 
   SiPostgresql,
@@ -20,7 +18,7 @@ import {
   SiGooglesheets,
   SiPython,
   SiC
-} from 'react-icons/si';
+} from '../utils/iconExports';
 
 const SkillsSection = styled.section`
   padding: 5rem 0;

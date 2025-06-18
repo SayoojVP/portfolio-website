@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "react-icons/fa": ["./node_modules/react-icons/fa"],
+      "react-icons/si": ["./node_modules/react-icons/si"],
+      "react-router-dom": ["./node_modules/react-router-dom"]
+    }
+  },
+  "include": ["src"]
+}

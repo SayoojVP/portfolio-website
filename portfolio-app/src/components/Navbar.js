@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { FaBriefcase, FaHome, FaEnvelope } from 'react-icons/fa';
+import { Link, useLocation, FaBriefcase, FaHome, FaEnvelope } from '../utils/iconExports';
 import styled from 'styled-components';
 import { scrollToSection } from '../utils/scrollUtils';
 

@@ -1,5 +1,11 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "installCommand": "npm install --legacy-peer-deps --force",
+  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
+  "framework": "create-react-app",
+  "buildEnvironment": {
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  }
 }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaGithub, FaLinkedin, FaTwitter, FaArrowRight, Link } from '../utils/iconExports';
 
 const HomeSection = styled.section`
   padding: 5rem 0 0;
