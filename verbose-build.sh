@@ -35,19 +35,14 @@ if [ ${#missing_deps[@]} -gt 0 ]; then
   npm install ${missing_deps[*]} --legacy-peer-deps --force --verbose
 fi
 
-# Create symlinks for problematic ESM modules
-echo "Creating module symlinks..."
+# Create module optimizations
+echo "Creating module optimizations..."
 mkdir -p node_modules/.vite/deps
-mkdir -p src/node_modules
 
-# Create symlinks for React icons in .vite/deps
-ln -sf ../../react-icons/fa/index.js node_modules/.vite/deps/react-icons_fa.js
-ln -sf ../../react-icons/si/index.js node_modules/.vite/deps/react-icons_si.js
-
-# Create symlinks in the src/node_modules directory
-echo "Creating symlinks for dependencies in src/node_modules..."
-ln -sf ../../node_modules/react-router-dom src/node_modules/
-ln -sf ../../node_modules/react-icons src/node_modules/
+# Add optimizer hints for React icons
+echo "Adding optimizer hints for React icons..."
+ln -sf ../../react-icons/fa/index.js node_modules/.vite/deps/react-icons_fa.js || true
+ln -sf ../../react-icons/si/index.js node_modules/.vite/deps/react-icons_si.js || true
 
 # Build the app with detailed output
 echo "Building the React app with NODE_OPTIONS=--openssl-legacy-provider..."

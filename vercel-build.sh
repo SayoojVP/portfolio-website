@@ -14,18 +14,13 @@ for dep in react react-dom react-icons react-router-dom @craco/craco; do
   fi
 done
 
-echo "Setting up module aliases..."
+echo "Setting up module optimizations..."
 mkdir -p node_modules/.vite/deps
-mkdir -p src/node_modules
 
-# Create symlinks for React icons in .vite/deps
+# Add optimizer hints for React icons
+echo "Adding optimizer hints for React icons..."
 ln -sf ../../react-icons/fa/index.js node_modules/.vite/deps/react-icons_fa.js || true
 ln -sf ../../react-icons/si/index.js node_modules/.vite/deps/react-icons_si.js || true
-
-# Create symlinks in src/node_modules
-echo "Creating symlinks in src/node_modules..."
-ln -sf ../../node_modules/react-router-dom src/node_modules/ || true
-ln -sf ../../node_modules/react-icons src/node_modules/ || true
 
 echo "Building React application with legacy Node options..."
 export NODE_OPTIONS=--openssl-legacy-provider

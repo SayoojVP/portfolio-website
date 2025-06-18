@@ -1,8 +1,7 @@
 // This file helps resolve ESM import issues with react-icons and react-router-dom
-// Using relative imports to access node_modules via symlinks
-import * as FaIcons from '../node_modules/react-icons/fa';
-import * as SiIcons from '../node_modules/react-icons/si';
-import * as ReactRouter from '../node_modules/react-router-dom';
+import * as FaIcons from 'react-icons/fa';
+import * as SiIcons from 'react-icons/si';
+import * as ReactRouter from 'react-router-dom';
 
 // Extract specific icons from FA
 const {

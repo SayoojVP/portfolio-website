@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "react-icons/fa": ["./node_modules/react-icons/fa"],
-      "react-icons/si": ["./node_modules/react-icons/si"],
-      "react-router-dom": ["./node_modules/react-router-dom"]
-    }
+      "react-icons/*": ["node_modules/react-icons/*"],
+      "react-router-dom/*": ["node_modules/react-router-dom/*"],
+      "react-router-dom": ["node_modules/react-router-dom"],
+      "react-icons": ["node_modules/react-icons"]
+    },
+    "jsx": "react",
+    "module": "commonjs"
   },
   "include": ["src"]
 }
