@@ -72,12 +72,13 @@ button {
 .section__title {
   font-size: var(--h1-font-size);
   color: var(--title-color);
-  margin-bottom: var(--mb-1);
+  margin-bottom: var(--mb-2-5); /* Increased margin to accommodate underline */
   text-align: center;
   position: relative;
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  padding-bottom: 1rem; /* Add padding for the underline */
 }
 
 .section__title::after {
@@ -88,7 +89,7 @@ button {
   left: 0;
   right: 0;
   margin: auto;
-  top: 2.5rem;
+  bottom: 0; /* Position at bottom instead of using a fixed top value */
   background-color: var(--first-color);
 }
 
