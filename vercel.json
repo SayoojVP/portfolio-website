@@ -1,18 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "portfolio-app/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "buildCommand": "cd portfolio-app && npm install && npm run build",
+  "outputDirectory": "portfolio-app/build",
+  "installCommand": "npm install",
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/portfolio-app/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
