@@ -142,7 +142,7 @@ button {
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
-  padding-right: 1rem;
+  padding-right: 325px;
 }
 
 .home__social-icon {
