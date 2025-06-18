@@ -19,12 +19,6 @@ const ContactContainer = styled.div`
 
 const ContactContent = styled.div``;
 
-const ContactInfo = styled.div`
-  display: flex;
-  margin-bottom: var(--mb-2);
-  align-items: center;
-`;
-
 const ContactInfoBox = styled.div`
   background-color: var(--container-color);
   border-radius: .75rem;

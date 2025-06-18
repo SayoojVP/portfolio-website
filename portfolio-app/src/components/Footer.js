@@ -84,17 +84,6 @@ const Copyright = styled.p`
 const Footer = () => {
   const location = useLocation();
   
-  const handleLinkClick = (sectionId) => {
-    if (location.pathname === '/') {
-      scrollToSection(sectionId);
-    } else {
-      // Navigate to home and then scroll
-      // Assuming you have a way to navigate programmatically
-      // For example, using useHistory from react-router-dom
-      // history.push('/');
-      // setTimeout(() => scrollToSection(sectionId), 100);
-    }
-  };
   
   return (
     <FooterContainer className="footer" data-theme="dark">

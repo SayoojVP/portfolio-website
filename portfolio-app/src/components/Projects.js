@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectsSection = styled.section`
   padding: 5rem 0 2rem;
@@ -12,10 +10,6 @@ const ProjectsContainer = styled.div`
 
 const ProjectsContent = styled.div`
   padding: 0 1.5rem;
-`;
-
-const ProjectsHeader = styled.div`
-  margin-bottom: var(--mb-2);
 `;
 
 const ProjectsGrid = styled.div`

@@ -77,7 +77,6 @@ const NavLink = styled(Link)`
 `;
 
 const Navbar = () => {
-  const location = useLocation();
   
   const handleLinkClick = (to) => {
     if (to.startsWith('#')) {
