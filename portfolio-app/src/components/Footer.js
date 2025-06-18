@@ -120,7 +120,6 @@ const Footer = () => {
             Skills
           </FooterLink>
           <FooterLink to="/projects">Projects</FooterLink>
-          <FooterLink to="/blog">Blog</FooterLink>
           <FooterLink to="/contact">Contact</FooterLink>
         </FooterLinks>
         

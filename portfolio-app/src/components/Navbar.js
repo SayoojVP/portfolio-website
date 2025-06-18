@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBriefcase, FaHome, FaFeatherAlt, FaEnvelope, FaSun, FaMoon, FaCode } from 'react-icons/fa';
+import { FaBriefcase, FaHome, FaEnvelope, FaSun, FaMoon, FaCode } from 'react-icons/fa';
 import styled from 'styled-components';
 import { ThemeContext } from '../context/ThemeContext';
 import { scrollToSection } from '../utils/scrollUtils';
@@ -136,14 +136,6 @@ const Navbar = () => {
               onClick={() => handleLinkClick('/projects')}
             >
               <FaBriefcase /> Projects
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink 
-              to="/blog"
-              onClick={() => handleLinkClick('/blog')}
-            >
-              <FaFeatherAlt /> Blog
             </NavLink>
           </NavItem>
           <NavItem>
