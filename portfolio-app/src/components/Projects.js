@@ -113,19 +113,17 @@ const Projects = () => {
       id: 1,
       title: 'Xpenso - Expense Tracker',
       description: 'A comprehensive Android application designed to help users track their daily expenses, set budgets, and visualize spending patterns. Features include expense categorization, budget alerts, and detailed spending analytics.',
-      technologies: ['Android', 'Kotlin', 'Room Database', 'MVVM', 'Material Design'],
-      image: 'https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      githubLink: 'https://github.com/sayoojvp/xpenso',
-      demoLink: 'https://play.google.com/store/apps/details?id=com.sayooj.xpenso',
+      technologies: ['Android', 'Flutter', 'Firebase', 'Android Studio', 'Material Design'],
+      image: 'https://moneyview.in/images/blog/wp-content/uploads/2017/10/Blog-11-reasonsfeature-min.jpg',
+      githubLink: 'https://github.com/SayoojVP/Xpenso-tracker',
     },
     {
       id: 2,
       title: 'Expiry Inventory Management System',
       description: 'A specialized inventory management solution focused on tracking product expiration dates for businesses in retail and pharmaceuticals. The system provides automated alerts for soon-to-expire items and helps reduce waste through intelligent inventory rotation.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Authentication'],
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      githubLink: 'https://github.com/sayoojvp/expiry-inventory',
-      demoLink: 'https://expiry-inventory.herokuapp.com',
+      image: 'https://img.freepik.com/free-vector/warehouse-interior-with-cardboard-boxes-racks_107791-1120.jpg',
+      githubLink: 'https://github.com/SayoojVP/expiry-inventory-management',
     },
   ];
 
@@ -155,9 +153,6 @@ const Projects = () => {
                   <ProjectLinks>
                     <ProjectLink href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <FaGithub /> Code
-                    </ProjectLink>
-                    <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                      <FaExternalLinkAlt /> Demo
                     </ProjectLink>
                   </ProjectLinks>
                 </ProjectData>
