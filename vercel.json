@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "cd portfolio-app && NODE_OPTIONS=--openssl-legacy-provider npm install --legacy-peer-deps --force && NODE_OPTIONS=--openssl-legacy-provider npm run build",
+  "outputDirectory": "portfolio-app/build",
+  "installCommand": "cd portfolio-app && npm install --legacy-peer-deps --force",
+  "framework": "create-react-app",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

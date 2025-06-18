@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaCalendarAlt, FaArrowRight } from 'react-icons/fa';
+import { FaCalendarAlt, FaArrowRight } from '../utils/iconExports';
 
 const BlogSection = styled.section`
   padding: 5rem 0 2rem;

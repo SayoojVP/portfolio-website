@@ -146,8 +146,8 @@ const Loading = styled.div`
 const Home = () => {
   const [personalInfo, setPersonalInfo] = useState({
     name: 'Sayooj VP',
-    title: 'Full Stack Developer / Entrepreneur',
-    bio: 'I’m a self-taught full-stack web developer and aspiring entrepreneur, passionate about building clean, functional digital experiences. Currently open to opportunities at startups and always up for meaningful collaborations.',
+    title: 'Developer / UI Designer / Entrepreneur',
+    bio: 'A passionate developer focused on creating beautiful and functional web applications.',
     photoUrl: 'https://media.licdn.com/dms/image/v2/D5603AQFFxWMruIXZ9w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1698772918229?e=1755734400&v=beta&t=FGGbQn6vVqOSZ-3sFilxKOAuNyycTESvJD4G3J1Mpfc',
   });
   const [loading, setLoading] = useState(false);
@@ -194,6 +194,17 @@ const Home = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
+        // First check if we're in production (Vercel deployment)
+        if (process.env.NODE_ENV === 'production' || !window.location.hostname.includes('localhost')) {
+          // In production, just use the default data and skip API call
+          console.log('Using default personal info in production');
+          setTimeout(() => {
+            setLoading(false);
+          }, 300);
+          return;
+        }
+        
+        // Only try to fetch from API in development
         const response = await fetch('/api/info');
         if (response.ok) {
           const data = await response.json();

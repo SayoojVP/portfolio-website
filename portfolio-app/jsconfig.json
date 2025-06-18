@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "react-icons/*": ["node_modules/react-icons/*"],
+      "react-router-dom/*": ["node_modules/react-router-dom/*"],
+      "react-router-dom": ["node_modules/react-router-dom"],
+      "react-icons": ["node_modules/react-icons"]
+    },
+    "jsx": "react",
+    "module": "commonjs"
+  },
+  "include": ["src"]
+}

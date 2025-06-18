@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaExclamationCircle } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaExclamationCircle } from '../utils/iconExports';
 import { useForm } from 'react-hook-form';
 
 const ContactSection = styled.section`
