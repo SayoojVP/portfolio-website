@@ -25,10 +25,6 @@ const ProjectsGrid = styled.div`
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  @media screen and (min-width: 992px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
 `;
 
 const ProjectCard = styled.div`
@@ -115,46 +111,28 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'A full-featured online store with payment processing, inventory management, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe API'],
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      githubLink: 'https://github.com/yourusername/ecommerce-platform',
-      demoLink: 'https://your-ecommerce-demo.com',
+      title: 'Xpenso - Expense Tracker',
+      description: 'A comprehensive Android application designed to help users track their daily expenses, set budgets, and visualize spending patterns. Features include expense categorization, budget alerts, and detailed spending analytics.',
+      technologies: ['Android', 'Kotlin', 'Room Database', 'MVVM', 'Material Design'],
+      image: 'https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      githubLink: 'https://github.com/sayoojvp/xpenso',
+      demoLink: 'https://play.google.com/store/apps/details?id=com.sayooj.xpenso',
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A productivity tool that helps teams organize projects, track progress, and collaborate effectively.',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      githubLink: 'https://github.com/yourusername/task-manager',
-      demoLink: 'https://your-task-app-demo.com',
-    },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'A responsive web application that displays current weather data and forecasts for cities worldwide.',
-      technologies: ['React', 'OpenWeather API', 'Chart.js'],
-      image: 'https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      githubLink: 'https://github.com/yourusername/weather-dashboard',
-      demoLink: 'https://your-weather-demo.com',
-    },
-    {
-      id: 4,
-      title: 'Personal Finance Tracker',
-      description: 'An application to help users track expenses, set budgets, and visualize spending habits.',
-      technologies: ['JavaScript', 'D3.js', 'Node.js', 'PostgreSQL'],
-      image: 'https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      githubLink: 'https://github.com/yourusername/finance-tracker',
-      demoLink: 'https://your-finance-demo.com',
+      title: 'Expiry Inventory Management System',
+      description: 'A specialized inventory management solution focused on tracking product expiration dates for businesses in retail and pharmaceuticals. The system provides automated alerts for soon-to-expire items and helps reduce waste through intelligent inventory rotation.',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Authentication'],
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      githubLink: 'https://github.com/sayoojvp/expiry-inventory',
+      demoLink: 'https://expiry-inventory.herokuapp.com',
     },
   ];
 
   return (
     <ProjectsSection className="section container" id="projects">
       <h2 className="section__title">Projects</h2>
-      <span className="section__subtitle">A selection of my most recent work</span>
+      <span className="section__subtitle">My featured projects</span>
       
       <ProjectsContainer className="container">
         <ProjectsContent>
